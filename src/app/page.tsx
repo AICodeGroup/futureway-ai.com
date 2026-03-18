@@ -31,7 +31,7 @@ export default function Home() {
             </a>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-8 text-xs">
+            <div className="hidden md:flex items-center gap-8 text-sm">
               <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">关于</a>
               <a href="#team" className="text-gray-600 hover:text-gray-900 transition-colors">团队</a>
               <a href="#services" className="text-gray-600 hover:text-gray-900 transition-colors">业务</a>
