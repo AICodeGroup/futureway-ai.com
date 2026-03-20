@@ -1,5 +1,6 @@
 'use client';
-
+// 1. 先导入图片
+import FullLogo from '@/../public/full-logo.svg'; 
 import Image from 'next/image';
 import { 
   ChevronRight, 
@@ -21,7 +22,7 @@ export default function Home() {
             {/* Logo */}
             <a href="#" className="flex items-center gap-3">
               <Image 
-                src="/full-logo.svg" 
+                src={FullLogo} 
                 alt="FUTUREWAY" 
                 width={80} 
                 height={40}
@@ -396,7 +397,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
               <Image 
-                src="/full-logo.svg" 
+                src={FullLogo} 
                 alt="FUTUREWAY" 
                 width={60} 
                 height={30}
