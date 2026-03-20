@@ -27,8 +27,8 @@ ssh root@$SERVER_IP << EOF
     # 使用 PM2 重启服务
     # 如果进程不存在则启动，存在则重启
     pm2 delete $APP_NAME 2>/dev/null
-    pm2 start pnpm --name "$APP_NAME" -- start -- -p $PORT
-    
+    PORT=$PORT pm2 start "pnpm start -- -p $PORT" --name "$APP_NAME"
+
     # 保存 PM2 状态
     pm2 save
     
