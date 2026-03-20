@@ -21,13 +21,13 @@ ssh root@$SERVER_IP << EOF
     [ -s "\$HOME/.nvm/nvm.sh" ] && . "\$HOME/.nvm/nvm.sh"
     
     # 安装依赖与构建
-    npm install
-    npm run build
+    pnpm install
+    pnpm run build
     
     # 使用 PM2 重启服务
     # 如果进程不存在则启动，存在则重启
     pm2 delete $APP_NAME 2>/dev/null
-    pm2 start npm --name "$APP_NAME" -- start -- -p $PORT
+    pm2 start pnpm --name "$APP_NAME" -- start -- -p $PORT
     
     # 保存 PM2 状态
     pm2 save
